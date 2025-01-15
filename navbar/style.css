@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+}
+body {
+  background-color: #fff8f9;
+}
+
+.navbar-container {
+  width: 100vw;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  position: relative;
+}
+.leftBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  width: 110px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo > img {
+  width: 100%;
+}
+
+.courses-btn {
+  background-color: #d6e2fa;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  padding: 8px 15px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+
+.rightBox {
+  display: flex;
+  gap: 30px;
+  padding-right: 20px;
+  font-weight: 600;
+  align-items: center;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.registerBtn {
+  background-color: #ed0331;
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown {
+  width: 500px;
+  position: absolute;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 30px;
+  left: -5%;
+  top: 50px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+.courses-heading {
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 20px 20px 20px 0px;
+  color: #374151;
+  border-bottom: 2px solid darkred;
+  text-align: start;
+}
+.courses-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.courses-row > img {
+  max-height: 50px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+.leftBox_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hamburger {
+    display: flex;
+  }
+  .rightBox {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+  .rightBox.active {
+    display: flex;
+  }
+  .leftBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+  }
+  .dropdown {
+    zoom: 70%;
+    top: 90px;
+    left: -300px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .dropdown {
+    zoom: 70%;
+    top: 90px;
+    left: -300px;
+  }
+  .leftBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .dropdown {
+    zoom: 60%;
+    left: -255px;
+  }
+}
